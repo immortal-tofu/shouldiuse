@@ -1,0 +1,27 @@
+{
+  "name": "shouldiuse",
+  "version": "0.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "",
+    "gulp-load-plugins": "",
+    "gulp-util": "",
+    "gulp-autoprefixer": "",
+    "gulp-jshint": "",
+    "gulp-imagemin": "",
+    "gulp-clean": "",
+    "gulp-bower": "",
+    "gulp-cache": "",
+    "gulp-react": "",
+    "gulp-size": "",
+    "gulp-sass": "",
+    "gulp-useref": "",
+    "gulp-browserify": "",
+    "reactify": "",
+    "react": "",
+    "browserify": ""
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
