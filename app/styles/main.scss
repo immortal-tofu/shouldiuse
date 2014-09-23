@@ -1,28 +1,48 @@
+html {
+  font-size: 62.5%;
+}
+
 body {
-    background: #fafafa;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #aaaafa;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
     color: #333;
+    text-align: center;
+    font-size: 2em;
+    margin: 0;
 }
 
-.hero-unit {
-    margin: 50px auto 0 auto;
-    width: 300px;
-    font-size: 18px;
-    font-weight: 200;
-    line-height: 30px;
-    background-color: #eee;
-    border-radius: 6px;
-    padding: 60px;
-    h1 {
-        font-size: 60px;
-        line-height: 1;
-        letter-spacing: -1px;
-    }
-}
-
-.browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
+h1 {
+    font-size: 3em;
+    margin: 0.5em 0;
     color: #000;
-    padding: 0.2em 0;
+}
+
+#baseline {
+    color: #fff;
+    font-size: 1em;
+    margin: 0 0 1em 0;
+    background: #8888fa;
+    padding: 1em;
+}
+
+input {
+    background: 0;
+    border: 1px solid #8888fa;
+    font-size: 1em;
+    text-align: left;
+    padding: 0.5em 0.5em;
+}
+
+button {
+    margin-top: 1em;
+    background: #8888fa;
+    border: 0;
+    font-size: 0.8em;
+    padding: 0.5em;
+    color: #fff;
+}
+
+#result {
+    font-size: 2em;
+    font-weight: bold;
 }
