@@ -12,13 +12,12 @@ var SkillInput =  React.createClass({
     return $('#skill' + this.props.key).value();
   },
   render: function () {
-    var createItem = function (text) {
-      return <option value={text}>{text}</option>;
+    var createItem = function (text, id) {
+      return <option value={text} key={id}>{text}</option>;
     };
     return (
       <div>
       <input type="text"
-        name="skill{this.props.key}" id="skill{this.props.key}"
         list={'techno' + this.props.key}
         valueLink={this.linkState('value')} />
 
