@@ -105,7 +105,8 @@ var ShouldIUseApp = React.createClass({
   render: function () {
     return (
       <div>
-        <p id="baseline">A simple answer to a complex question</p>
+        <p id="baseline">Choose a technology was a difficult decision.
+          No longer.</p>
         <h1>Should I Use</h1>
         <SkillChoice source="scripts/data.json" />
       </div>
