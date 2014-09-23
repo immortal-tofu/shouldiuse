@@ -19,10 +19,10 @@ var SkillInput =  React.createClass({
       <div>
       <input type="text"
         name="skill{this.props.key}" id="skill{this.props.key}"
-        list="techno{this.props.key}"
+        list={'techno' + this.props.key}
         valueLink={this.linkState('value')} />
 
-      <datalist id="techno{this.props.key}((">
+      <datalist id={'techno' + this.props.key}>
         {this.props.list.map(createItem)}
       </datalist>
       </div>
@@ -76,11 +76,16 @@ var SkillChoice = React.createClass({
     e.preventDefault();
     var skill1 = this.refs.input1.state.value;
     var skill2 = this.refs.input2.state.value;
+    if (!skill1 || !skill2) return;
     var score1 = this.score(skill1);
     var score2 = this.score(skill2);
-    console.log(score1, score2);
-    var winner = score1 > score2 ? skill1 : skill2;
-    this.setState({ winner: winner });
+    var winner;
+    if (score1 === score2) {
+      this.setState({ winner: 'You should use both' });
+    } else {
+      winner = score1 > score2 ? skill1 : skill2;
+      this.setState({ winner: 'You should use ' + winner });
+    }
   },
   render: function () {
     var createItem = function (text) {
@@ -89,10 +94,10 @@ var SkillChoice = React.createClass({
     return (
         <form onSubmit={this.handleSubmit}>
           <SkillInput ref="input1" key="1" list={this.state.items.languages} />
-          or
+          <p>or</p>
           <SkillInput ref="input2" key="2" list={this.state.items.languages} />
           <button>Compare</button>
-          <p>{this.state.winner}</p>
+          <p id="result">{this.state.winner}</p>
         </form>
     );
   }
@@ -101,6 +106,7 @@ var ShouldIUseApp = React.createClass({
   render: function () {
     return (
       <div>
+        <p id="baseline">A simple answer to a complex question</p>
         <h1>Should I Use</h1>
         <SkillChoice source="data.json" />
       </div>
