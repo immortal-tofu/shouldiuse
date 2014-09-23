@@ -1,7 +1,8 @@
 {
   "name": "shouldiuse",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
     "gulp": "",
     "gulp-load-plugins": "",
@@ -16,6 +17,7 @@
     "gulp-size": "",
     "gulp-sass": "",
     "gulp-useref": "",
+    "gulp-uglify": "",
     "gulp-browserify": "",
     "reactify": "",
     "react": "",

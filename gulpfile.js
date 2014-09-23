@@ -5,7 +5,6 @@ var gulp = require('gulp');
 // Load plugins
 var $ = require('gulp-load-plugins')();
 
-
 // Styles
 gulp.task('styles', function () {
     return gulp.src('app/styles/main.scss')
@@ -65,8 +64,27 @@ gulp.task('bundle', ['styles', 'scripts', 'bower'], function(){
                .pipe(gulp.dest('dist'));
 });
 
+// Bundle compressed
+gulp.task('bundle_compress',
+    ['styles', 'scripts_compress', 'bower'], function(){
+    return gulp.src('./app/*.html')
+               .pipe($.useref.assets())
+               .pipe($.useref())
+               .pipe(gulp.dest('dist'));
+});
+
 // Build
-gulp.task('build', ['html', 'bundle', 'images']);
+gulp.task('build', ['json', 'html', 'bundle', 'images']);
+gulp.task('scripts_compress', ['scripts'], function () {
+    return gulp.src('dist/scripts/app.js')
+        .pipe($.uglify())
+        .pipe(gulp.dest('dist/scripts'))
+        .pipe($.size());
+    });
+
+// Compile
+gulp.task('compile', ['json',
+    'html', 'bundle_compress', 'images']);
 
 // Default task
 gulp.task('default', ['clean'], function () {
@@ -81,7 +99,7 @@ gulp.task('bower', function() {
 });
 
 gulp.task('json', function() {
-    gulp.src('app/scripts/json/**/*.json', {base: 'app/scripts'})
+    gulp.src('app/scripts/json/**/*.json')
         .pipe(gulp.dest('dist/scripts/'));
 });
 
