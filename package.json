@@ -1,29 +1,16 @@
 {
   "name": "shouldiuse",
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.1.1"
   },
-  "devDependencies": {
-    "gulp": "",
-    "gulp-load-plugins": "",
-    "gulp-util": "",
-    "gulp-autoprefixer": "",
-    "gulp-jshint": "",
-    "gulp-imagemin": "",
-    "gulp-clean": "",
-    "gulp-bower": "",
-    "gulp-cache": "",
-    "gulp-react": "",
-    "gulp-size": "",
-    "gulp-sass": "",
-    "gulp-useref": "",
-    "gulp-uglify": "",
-    "gulp-browserify": "",
-    "reactify": "",
-    "react": "",
-    "browserify": ""
-  },
-  "engines": {
-    "node": ">=0.10.0"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }

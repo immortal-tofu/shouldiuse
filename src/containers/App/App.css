@@ -1,0 +1,82 @@
+.App {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+.App__forkMe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+}
+
+.App__title {
+  line-height: 1em;
+  font-size: 3em;
+  margin: 0.5em 0;
+  color: rgb(98, 12, 172);
+}
+
+.App__title span {
+  color: rgba(98, 12, 172, 0.5);
+  font-size: 0.5em;
+}
+
+.App__submit {
+  margin-top: 2em;
+  background: rgb(98, 12, 172);
+  padding: 20px 25px;
+  border: 0;
+  font-size: 1em;
+  font-weight: bold;
+  color: #fff;
+  box-shadow: 1px 3px 0px 0px rgba(0, 0, 0, 0.5);
+}
+
+.App__choices {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 800px;
+}
+
+.App__baseline {
+  color: #fff;
+  padding: 20px 80px 20px 80px;
+  margin: 0 0 1em 0;
+  background: rgb(163, 104, 213);
+}
+
+.App__result {
+  margin: 60px 0 20px 0;
+  background: rgb(98, 12, 172);
+  padding: 20px;
+  color: #fff;
+}
+
+.App__resultIntro {
+  margin: 0;
+}
+
+.App__resultChoice {
+  margin: 0;
+  font-size: 3em;
+  font-weight: bold;
+  text-overflow: ellipsis;
+}
+
+.App__mentions {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 0.6em;
+  line-height: 1.8em;
+  background: #eee;
+  color: #666;
+  padding: 0 20px;
+  text-align: center;
+}

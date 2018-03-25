@@ -1,0 +1,13 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  color: #333;
+  text-align: center;
+  font-size: 2em;
+}
